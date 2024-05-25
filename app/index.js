@@ -6,7 +6,7 @@ const path = require('path')
 app.use(express.json());
 const cors = require('cors')
 let corsOptions = { 
-    origin : ['http://localhost:3001' , 'http://localhost:3000'], 
+    origin : ['https://market-246t.onrender.com'], 
  } 
    
  app.use(cors(corsOptions))
@@ -18,7 +18,7 @@ const { auth , requiresAuth } = require('express-openid-connect')
 const config = {
     authRequired: false,
     auth0Logout: true,
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://market-246t.onrender.com',
     clientID: '8zucliP8RVJMubHeUoBKWwcjKTmbmdM6',
     issuerBaseURL: 'https://dev-s2d5hsgmg3na6xuq.eu.auth0.com',
     secret: 'Fngv9vJmx8A3dqGUvaMbESaimgRVviYR52wg_FQZyMdnuB4754n82yTIvTphM561'
@@ -127,7 +127,7 @@ app.delete('/item/:id' , async(req , res)=>{
     }
 })
 
-app.listen(3000 || "" , ()=>{
+app.listen(3000 || "https://market-246t.onrender.com" , ()=>{
     console.log("Server is running !")
 })
 
