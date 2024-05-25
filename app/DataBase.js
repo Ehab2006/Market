@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Url = "mongodb+srv://HOoBs:HOoBs@hoobs.pgvx1or.mongodb.net/?retryWrites=true&w=majority&appName=HOoBs"
 mongoose.connect(Url).then(() => console.log('DataBase is running !')).catch((err)=>{
-    console.log('error')
+    console.log(err)
 })
 
 const Schema = mongoose.Schema;
